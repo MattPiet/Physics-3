@@ -1,0 +1,16 @@
+Wed Sep 16 13:46:54 2026
+[INFO]: Starting the SceneManager
+[INFO]: OpenGL version: 4.6.0 NVIDIA 610.47
+[INFO]: Graphics card vendor NVIDIA Corporation
+[INFO]: Graphics card name NVIDIA GeForce RTX 4060 Laptop GPU/PCIe/SSE2
+[INFO]: GLSL Version 4.60 NVIDIA
+[INFO]: Uniforms:
+"Debugcolour" loc:0
+"colour" loc:-1
+"lightPos" loc:-1
+"modelMatrix" loc:2
+"myTexture" loc:1
+"projection" loc:-1
+"view" loc:-1
+
+[INFO]: Deleting the SceneManager
