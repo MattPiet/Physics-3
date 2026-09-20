@@ -25,15 +25,15 @@ void Box::generateVerticesAndNormals()
     
     Vec3 corners[8];
 
-    corners[0] = center + Vec3(-halfExtents.x, -halfExtents.y,  halfExtents.z); // Bottom-Left
-    corners[1] = center + Vec3( halfExtents.x, -halfExtents.y,  halfExtents.z); // Bottom-Right
-    corners[2] = center + Vec3( halfExtents.x,  halfExtents.y,  halfExtents.z); // Top-Right
-    corners[3] = center + Vec3(-halfExtents.x,  halfExtents.y,  halfExtents.z); // Top-Left
+    corners[0] = center + QMath::rotate(Vec3(-halfExtents.x, -halfExtents.y,  halfExtents.z),orientation); // Bottom-Left
+    corners[1] = center + QMath::rotate(Vec3( halfExtents.x, -halfExtents.y,  halfExtents.z),orientation); // Bottom-Right
+    corners[2] = center + QMath::rotate(Vec3( halfExtents.x,  halfExtents.y,  halfExtents.z),orientation); // Top-Right
+    corners[3] = center + QMath::rotate(Vec3(-halfExtents.x,  halfExtents.y,  halfExtents.z),orientation); // Top-Left
 
-    corners[4] = center + Vec3(-halfExtents.x, -halfExtents.y, -halfExtents.z); // Bottom-Left
-    corners[5] = center + Vec3( halfExtents.x, -halfExtents.y, -halfExtents.z); // Bottom-Right
-    corners[6] = center + Vec3( halfExtents.x,  halfExtents.y, -halfExtents.z); // Top-Right
-    corners[7] = center + Vec3(-halfExtents.x,  halfExtents.y, -halfExtents.z); // Top-Left
+    corners[4] = center + QMath::rotate(Vec3(-halfExtents.x, -halfExtents.y, -halfExtents.z), orientation); // Bottom-Left
+    corners[5] = center + QMath::rotate(Vec3( halfExtents.x, -halfExtents.y, -halfExtents.z), orientation); // Bottom-Right
+    corners[6] = center + QMath::rotate(Vec3( halfExtents.x,  halfExtents.y, -halfExtents.z), orientation); // Top-Right
+    corners[7] = center + QMath::rotate(Vec3(-halfExtents.x,  halfExtents.y, -halfExtents.z), orientation); // Top-Left
 
     int lineIndices[24] = {
         0, 1,  1, 2,  2, 3,  3, 0, // Front face edges
